@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     EditText usd, cad;
     Button transform;
     String cadDollar;
-    int cadRate, usdRate, usResult, cadResult;
+    String usdDollar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +26,17 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                cadDollar = cad.getText().toString();
-                usd.setText(Integer.parseInt(cadDollar)*0.74+"");
+                if (!cad.getText().toString().equalsIgnoreCase("")){
+                    cadDollar = cad.getText().toString();
+                    usd.setText(Integer.parseInt(cadDollar)*0.74+"");
+                    cad.setText("");
+                }
+                else {
 
+
+                    usdDollar = usd.getText().toString();
+                    cad.setText(Integer.parseInt(usdDollar) * 1.36 + "");
+                }
             }
 
         });
