@@ -11,7 +11,8 @@
         android:id="@+id/txtView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CAD"
+        android:hint="CAD"
+        android:inputType="number"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         />
@@ -19,7 +20,8 @@
         android:id="@+id/txtView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USD"
+        android:hint="USD"
+        android:inputType="number8"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
 
